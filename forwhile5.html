@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" onclick="play()" value="play">
+</body>
+<script>
+    function play() {
+    let range=+prompt("Chọn khoảng cho số của bạn")
+    let a=(Math.floor(Math.random()*10))+range-5
+    let i=1
+    for(;i++<=3;) {
+        let guess = prompt("Bạn đoán đi")
+        if (guess==a){
+            alert("Xin chúc mừng. Con số may mắn của bạn là: "+a)
+            break
+        }else if(guess>a){
+            alert("Bạn đoán hơi cao quá, xin thử lại")
+        }else {
+            alert("Bạn đoán hơi thấp quá, xin thử lại")
+        }
+    }
+    if(i==5){
+        alert("Bạn đã đoán hết số lượt cho phép, chúng ta sẽ chẳng thể biết con số may mắn đó :(")
+    }else{
+        alert("Chúc mừng bạn. Chơi lại chứ?")
+    }
+    }
+
+</script>
+</html>

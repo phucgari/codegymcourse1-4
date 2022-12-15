@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let a=0
+    let b=1
+    let c=1
+    let total=1
+    let number=prompt("how many fibonacci number you want to display")-2
+    document.write(a+ "<br/>")
+    document.write(b+ "<br/>")
+    for(let count=1;count<=number;count++){
+        c=a+b
+        document.write(c+ "<br/>")
+        a=b
+        b=c
+        total=total+c
+        console.log(total)
+        if (c%5==0){
+            console.log(c+" divisible by 5")
+        }
+    }
+</script>
+</html>
